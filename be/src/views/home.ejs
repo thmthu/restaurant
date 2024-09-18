@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homemmm</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: coral;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="topnav">
+        <a href="page-create">Create</a>
+        <a href="home" class="active">Home</a>
+
+
+    </div>
+
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Restaurant id</th>
+            <th>Action</th>
+
+
+        </tr>
+        <% for(let i=0;i<listDish.length;i++) {%>
+            <tr>
+                <td>
+                    <%= listDish[i].id %>
+                </td>
+                <td>
+                    <%= listDish[i].name %>
+                </td>
+                <td>
+                    <%= listDish[i].description %>
+                </td>
+                <td>
+                    <%= listDish[i].price %>
+                </td>
+                <td>
+                    <%= listDish[i].image %>
+                </td>
+                <td>
+                    <%= listDish[i].restaurant_id %>
+                </td>
+                <td>
+                    <a href="delete/<%= listDish[i].id%> ">Delete</a>
+                    <a href="page-update/<%= listDish[i].id%> ">update</a>
+                </td>
+
+            </tr>
+            <%} %>
+
+
+
+    </table>
+
+</body>
+
+</html>

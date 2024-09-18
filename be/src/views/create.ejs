@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homemmm</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="page-create" class="active">Create</a>
+        <a href="home">Home</a>
+    </div>
+    <div class="form">
+        <form action="/manage/dish/create" method="POST">
+            <fieldset>
+                <legend>Restaurant Information:</legend>
+                <div class="input-group">
+                    <label>Restaurant ID</label>
+                    <input type="text" name="restaurant_id">
+                </div>
+                <div class="input-group">
+                    <label>ID food</label>
+                    <input type="text" name="id">
+                </div>
+                <div class="input-group">
+                    <label>name</label>
+                    <input type="text" name="name">
+                </div>
+                <div class="input-group">
+                    <label>image</label>
+                    <input type="text" name="image">
+                </div>
+                <div class="input-group">
+                    <label>Description</label>
+                    <input type="text" name="description">
+                </div>
+                <div class="input-group">
+                    <label>price</label>
+                    <input type="text" name="price">
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+    </div>
